@@ -4,6 +4,19 @@ A PowerShell script that automates Windows updates - checks, downloads, and inst
 
 A PowerShell and Batch solution for managing Windows updates with administrative control.
 
+
+## Important Deployment Note
+
+For proper functionality:
+1. Maintain all scripts in the same directory
+2. Preserve the original filenames
+3. Keep the file structure intact
+
+This ensures:
+- Correct inter-script dependencies
+- Proper path resolution
+- Seamless batch file operation
+
 ## Features
 - One-click menu interface (`WindowsUpdateHelper.bat`)
 - Automated update installation with progress tracking
