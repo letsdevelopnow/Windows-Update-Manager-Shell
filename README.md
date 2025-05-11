@@ -22,6 +22,21 @@ A PowerShell and Batch solution for managing Windows updates with administrative
    - `1`: Install all available updates
    - `2`: Clear Windows Update cache
    - `3`: Exit
+## Requirements
+- Windows 7/8/10/11
+- PowerShell 5.1+
+- Administrator rights
+
+## Technical Details
+- Uses `Microsoft.Update.Session` COM object for update management
+- Implements `takeown` + `icacls` for cache clearance
+- Services are automatically stopped/restarted during cache cleaning
+- Shows per-update download/install progress
+
+## Notes
+- System restart may be required after updates
+- Cache clearing will force re-download of updates
+- Always create a restore point before major updates
 
 Alternatively run the PowerShell scripts directly as admin:
 ```powershell
@@ -30,3 +45,6 @@ Alternatively run the PowerShell scripts directly as admin:
 
 # Clear cache
 .\Clear-UpdateCache.ps1
+
+
+
